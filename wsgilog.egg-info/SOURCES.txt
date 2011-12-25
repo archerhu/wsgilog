@@ -1,0 +1,7 @@
+setup.py
+wsgilog/__init__.py
+wsgilog.egg-info/PKG-INFO
+wsgilog.egg-info/SOURCES.txt
+wsgilog.egg-info/dependency_links.txt
+wsgilog.egg-info/top_level.txt
+wsgilog.egg-info/zip-safe
