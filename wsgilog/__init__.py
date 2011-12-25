@@ -84,7 +84,8 @@ class LogStdout(object):
     def write(self, info):
         '''Writes non-whitespace strings to logger.'''
         if info.lstrip().rstrip() != '': self.logger(info)
-
+    def flush(self):
+        return
 
 class WsgiLog(object):
 
@@ -121,7 +122,7 @@ class WsgiLog(object):
             if 'tofile' in kw:
                 setlog(TimedRotatingFileHandler(
                     # Log file path
-                    kw.get('file', LOGNAME),
+                    kw.get('tofile', LOGNAME),
                     # Interval to backup log file
                     kw.get('interval', INTERVAL),
                     # Number of backups to keep
